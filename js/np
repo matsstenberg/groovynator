@@ -1,0 +1,12 @@
+var sp = getSpotifyApi();
+var models  = sp.require("$api/models");
+var player = models.player;
+
+var currentHTML = document.getElementById(np);
+
+   var playerTrackInfo = sp.trackPlayer.getNowPlayingTrack();
+   if (playerTrackInfo == null) {
+currentHTML.innerHTML = 'No track currently playing';
+   } else {
+  currentHTML.innerHTML = 'Now playing: ' + currentTrack;
+   }
